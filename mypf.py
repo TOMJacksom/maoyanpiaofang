@@ -1,7 +1,5 @@
-##猫眼票房数据爬取
-
-
 # -*- coding: UTF-8 -*-
+
 import requests
 from bs4 import BeautifulSoup
 
