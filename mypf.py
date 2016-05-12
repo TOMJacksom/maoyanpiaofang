@@ -14,7 +14,7 @@ def crawl(url):
     #print "片名\t\t上映天数\t\t实时票房\t\t票房占比\t\t排片占比\t\t累计票房"
     for movie in pf.find_all("ul"):
         name = movie.find("li", "c1").find("b").text
-        shangying = movie.find("li", "c1").find("em").text
+        shangying = movie.find("li", "c1").find("br").find_next_siblings().pop(0).text
         instant = movie.find("li", "c2").find("b").text
         pfzhanbi = movie.find("li", "c3").text
         ppzhanbi = movie.find("li", "c4").text
